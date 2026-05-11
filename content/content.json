@@ -173,6 +173,11 @@
           ]
         },
         {
+          "type": "excel",
+          "heading": "Q2 Ideas — All Groups",
+          "src": "assets/files/hmw-responses.xlsx"
+        },
+        {
           "type": "files",
           "heading": "Download",
           "items": [
