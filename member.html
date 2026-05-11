@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Member — HexaGram</title>
+  <meta name="description" content="HexaGram member deliverables folder." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-name">Hexa<span>Gram</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About the Course</a>
+        <a href="mentors.html">Mentors</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="subpage-header">
+    <div class="container">
+      <div class="crumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span id="crumbMember">Loading…</span>
+      </div>
+      <h1 class="subpage-title" id="memberTitle">Loading…</h1>
+      <p class="subpage-desc" id="memberDesc"></p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="cat-grid" id="memberGrid">
+        <div class="loading">Loading deliverables…</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2026 HexaGram · Mahindra University</div>
+      <div>// built with curiosity</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      HG.renderMember();
+    });
+  </script>
+</body>
+</html>
