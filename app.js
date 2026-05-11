@@ -241,6 +241,7 @@ window.HG = (function () {
   }
 
   async function _setupExcel() {
+    if (typeof XLSX === 'undefined') return;
     const blocks = document.querySelectorAll('[data-excel-src]');
     for (const block of blocks) {
       const src = block.dataset.excelSrc;
