@@ -173,9 +173,9 @@
           ]
         },
         {
-          "type": "embed",
+          "type": "excel",
           "heading": "Q2 Ideas — All Groups",
-          "src": "https://docs.google.com/spreadsheets/d/1eEZHIXoIgmeaMk8WRKQPxizwWElF8eSf/pubhtml?widget=true&headers=false"
+          "src": "assets/files/hmw-responses.xlsx"
         },
         {
           "type": "files",

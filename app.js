@@ -98,6 +98,7 @@ window.HG = (function () {
       body.classList.remove('loading');
       body.innerHTML = blocks || '<p class="empty">No content yet. Add blocks to this category in content.json.</p>';
       _setupPersonFilter();
+      _setupExcel();
     } catch (e) {
       body.innerHTML = `<p class="empty">Failed to load content: ${escapeHtml(e.message)}</p>`;
     }
@@ -222,6 +223,11 @@ window.HG = (function () {
             </div>
           `).join('')}
         </div>`;
+      case 'excel':
+        return `<div class="block" data-excel-src="${escapeHtml(b.src)}">
+          ${b.heading ? `<h2>${escapeHtml(b.heading)}</h2>` : ''}
+          <div class="spreadsheet-loading" style="color:var(--text-dim);font-family:var(--font-mono);font-size:.85rem">Loading…</div>
+        </div>`;
       case 'embed':
         return `<div class="block">
           ${b.heading ? `<h2>${escapeHtml(b.heading)}</h2>` : ''}
@@ -231,6 +237,41 @@ window.HG = (function () {
         </div>`;
       default:
         return '';
+    }
+  }
+
+  async function _setupExcel() {
+    const blocks = document.querySelectorAll('[data-excel-src]');
+    for (const block of blocks) {
+      const src = block.dataset.excelSrc;
+      try {
+        const res = await fetch(src, { cache: 'no-cache' });
+        const buf = await res.arrayBuffer();
+        const wb  = XLSX.read(buf, { type: 'array' });
+
+        function renderSheet(idx) {
+          block.querySelectorAll('.ss-tab').forEach((t, i) => t.classList.toggle('ss-tab-active', i === idx));
+          const ws   = wb.Sheets[wb.SheetNames[idx]];
+          const html = XLSX.utils.sheet_to_html(ws, { header: '', footer: '' });
+          block.querySelector('.excel-table-wrap').innerHTML = html;
+        }
+
+        const tabsHtml = wb.SheetNames.map((n, i) =>
+          `<button class="ss-tab${i === 0 ? ' ss-tab-active' : ''}" data-idx="${i}">${escapeHtml(n)}</button>`
+        ).join('');
+
+        block.querySelector('.spreadsheet-loading').outerHTML =
+          `<div class="ss-tabs">${tabsHtml}</div><div class="excel-table-wrap"></div>`;
+
+        renderSheet(0);
+
+        block.querySelector('.ss-tabs').addEventListener('click', e => {
+          const btn = e.target.closest('[data-idx]');
+          if (btn) renderSheet(Number(btn.dataset.idx));
+        });
+      } catch (e) {
+        block.querySelector('.spreadsheet-loading').textContent = 'Failed to load file.';
+      }
     }
   }
 
