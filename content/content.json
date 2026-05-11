@@ -1,199 +1,189 @@
 {
-  "categories": [
-    {
-      "id": "audio-recordings",
-      "title": "Audio Recordings",
-      "icon": "🎙",
-      "summary": "Raw interview audio from our field research sessions.",
-      "description": "Original voice recordings captured during empathy interviews. Each clip is paired with a transcript under the Transcripts section.",
-      "blocks": [
-        {
-          "type": "text",
-          "heading": "Overview",
-          "paragraphs": [
-            "This archive contains the original audio captured during our user interviews. Recordings are uploaded as the team gathers them.",
-            "To add a new recording: drop the file into assets/audio/ in the repo and append a new entry under the audio block below."
+  "members": {
+    "ayushman": {
+      "name": "Ayushman",
+      "id": "SE24UCSE258",
+      "tagline": "Field research & persona synthesis",
+      "pages": {
+        "personas": {
+          "title": "Personas",
+          "icon": "🧑‍💻",
+          "summary": "Individual personas from raw interview data.",
+          "description": "Ayushman's persona artifacts captured during empathy interviews.",
+          "blocks": [
+            {
+              "type": "images",
+              "heading": "Individual personas",
+              "items": [
+                { "src": "assets/images/ayushman-persona-1.jpg", "alt": "Persona 1", "caption": "Persona 01" },
+                { "src": "assets/images/ayushman-persona-2.jpg", "alt": "Persona 2", "caption": "Persona 02" }
+              ]
+            }
           ]
         },
-        {
-          "type": "audio",
-          "heading": "Recordings",
-          "items": [
-            { "label": "Interview 01 — Participant A", "src": "assets/audio/interview-01.mp3" },
-            { "label": "Interview 02 — Participant B", "src": "assets/audio/interview-02.mp3" }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "consolidated-personas",
-      "title": "Consolidated Personas",
-      "icon": "👥",
-      "summary": "Merged personas synthesized from across our user research.",
-      "description": "After interviewing across user segments, we consolidated overlapping traits into a small set of representative personas.",
-      "blocks": [
-        {
-          "type": "text",
-          "heading": "Synthesis approach",
-          "paragraphs": [
-            "Individual personas were grouped by shared goals, frustrations, and behaviors. Each consolidated persona represents a recurring archetype from our interview data."
+        "audio-recordings": {
+          "title": "Audio Recordings",
+          "icon": "🎙",
+          "summary": "Raw interview audio.",
+          "description": "Original voice recordings captured by Ayushman.",
+          "blocks": [
+            {
+              "type": "audio",
+              "heading": "Recordings",
+              "items": [
+                { "label": "Interview 01 — Participant A", "src": "assets/audio/ayushman-01.mp3" }
+              ]
+            }
           ]
         },
-        {
-          "type": "images",
-          "heading": "Consolidated persona boards",
-          "items": [
-            { "src": "assets/images/persona-1.jpg", "alt": "Consolidated persona 1", "caption": "Persona 01 — primary user" },
-            { "src": "assets/images/persona-2.jpg", "alt": "Consolidated persona 2", "caption": "Persona 02 — secondary user" }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "hmw-question",
-      "title": "HMW Question",
-      "icon": "❓",
-      "summary": "Our refined How Might We question and how we arrived at it.",
-      "description": "The How Might We question that anchors our project and the reasoning behind its framing.",
-      "blocks": [
-        {
-          "type": "text",
-          "heading": "Our HMW",
-          "paragraphs": [
-            "How might we [insert your final HMW question here] — phrased to be broad enough to invite ideation but narrow enough to anchor a solution."
+        "transcripts": {
+          "title": "Transcripts",
+          "icon": "📝",
+          "summary": "Verbatim transcripts.",
+          "description": "Written transcripts of Ayushman's interviews.",
+          "blocks": [
+            {
+              "type": "files",
+              "heading": "All transcripts",
+              "items": [
+                { "name": "Interview 01 — Transcript", "kind": "pdf", "href": "assets/files/ayushman-transcript-01.pdf", "sub": "ayushman-transcript-01.pdf" }
+              ]
+            }
           ]
         },
-        {
-          "type": "text",
-          "heading": "Why this framing",
-          "paragraphs": [
-            "We tested multiple framings against our consolidated personas. This one consistently surfaced the highest-quality ideas during our brainstorming sessions."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "journey-map",
-      "title": "Journey Map",
-      "icon": "🗺",
-      "summary": "The end-to-end experience of our primary persona.",
-      "description": "A visualization of touchpoints, emotions, and friction points across the user journey.",
-      "blocks": [
-        {
-          "type": "images",
-          "heading": "Primary user journey",
-          "items": [
-            { "src": "assets/images/journey-map.jpg", "alt": "Journey map", "caption": "End-to-end journey for our primary persona" }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "personas",
-      "title": "Personas",
-      "icon": "🧑‍💻",
-      "summary": "Individual personas captured from raw interview data.",
-      "description": "Each persona represents one interviewee's goals, frustrations, and context, before consolidation.",
-      "blocks": [
-        {
-          "type": "images",
-          "heading": "Individual personas",
-          "items": [
-            { "src": "assets/images/persona-raw-1.jpg", "alt": "Persona 1" },
-            { "src": "assets/images/persona-raw-2.jpg", "alt": "Persona 2" },
-            { "src": "assets/images/persona-raw-3.jpg", "alt": "Persona 3" }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "rca",
-      "title": "RCA",
-      "icon": "🔬",
-      "summary": "Root cause analysis behind the problem we chose.",
-      "description": "A structured breakdown of the underlying causes that produce the symptoms our users report.",
-      "blocks": [
-        {
-          "type": "text",
-          "heading": "Method",
-          "paragraphs": [
-            "We used the 5-Whys technique combined with a fishbone diagram to trace surface-level complaints back to systemic root causes."
+        "consolidated-personas": {
+          "title": "Consolidated Personas",
+          "icon": "👥",
+          "summary": "Merged personas synthesized across research.",
+          "description": "Consolidated personas based on Ayushman's research segment.",
+          "blocks": [
+            {
+              "type": "images",
+              "heading": "Consolidated persona boards",
+              "items": [
+                { "src": "assets/images/ayushman-consol-1.jpg", "alt": "Consolidated persona", "caption": "Consolidated 01" }
+              ]
+            }
           ]
         },
-        {
-          "type": "images",
-          "heading": "RCA artifacts",
-          "items": [
-            { "src": "assets/images/rca-fishbone.jpg", "alt": "Fishbone diagram", "caption": "Fishbone diagram" },
-            { "src": "assets/images/rca-5whys.jpg", "alt": "5 Whys", "caption": "5 Whys chain" }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "responses-and-graph-hmw",
-      "title": "Responses and Graph (HMW)",
-      "icon": "📊",
-      "summary": "Quantitative responses to our HMW survey, visualized.",
-      "description": "Raw response counts and visualizations from the survey we ran to validate the HMW question.",
-      "blocks": [
-        {
-          "type": "images",
-          "heading": "Survey results",
-          "items": [
-            { "src": "assets/images/graph-1.jpg", "alt": "Graph 1", "caption": "Distribution of responses by segment" },
-            { "src": "assets/images/graph-2.jpg", "alt": "Graph 2", "caption": "Severity rating breakdown" }
+        "hmw-question": {
+          "title": "HMW Question",
+          "icon": "❓",
+          "summary": "Refined How Might We question.",
+          "description": "Ayushman's contribution to the HMW framing.",
+          "blocks": [
+            { "type": "text", "heading": "HMW", "paragraphs": ["How might we [insert HMW] — Ayushman's framing."] }
           ]
         },
-        {
-          "type": "files",
-          "heading": "Raw data",
-          "items": [
-            { "name": "HMW survey responses (CSV)", "kind": "csv", "href": "assets/files/hmw-responses.csv", "sub": "hmw-responses.csv" }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "solution",
-      "title": "Solution",
-      "icon": "💡",
-      "summary": "Our proposed solution and prototype.",
-      "description": "The concept, the prototype, and the reasoning that brought us here.",
-      "blocks": [
-        {
-          "type": "text",
-          "heading": "The concept",
-          "paragraphs": [
-            "Describe your solution here — what it is, who it's for, and the core insight that makes it work."
+        "journey-map": {
+          "title": "Journey Map",
+          "icon": "🗺",
+          "summary": "End-to-end experience of the primary persona.",
+          "description": "Journey map produced from Ayushman's persona.",
+          "blocks": [
+            {
+              "type": "images",
+              "heading": "Primary user journey",
+              "items": [{ "src": "assets/images/ayushman-journey.jpg", "alt": "Journey map", "caption": "Journey map" }]
+            }
           ]
         },
-        {
-          "type": "images",
-          "heading": "Prototype",
-          "items": [
-            { "src": "assets/images/prototype-1.jpg", "alt": "Prototype screen 1" },
-            { "src": "assets/images/prototype-2.jpg", "alt": "Prototype screen 2" }
+        "rca": {
+          "title": "RCA",
+          "icon": "🔬",
+          "summary": "Root cause analysis.",
+          "description": "Ayushman's RCA work.",
+          "blocks": [
+            { "type": "text", "heading": "Method", "paragraphs": ["5-Whys + fishbone applied to the problem."] }
+          ]
+        },
+        "responses-and-graph-hmw": {
+          "title": "Responses and Graph (HMW)",
+          "icon": "📊",
+          "summary": "Quantitative HMW survey responses.",
+          "description": "Survey responses collected by Ayushman.",
+          "blocks": [
+            { "type": "images", "heading": "Graphs", "items": [{ "src": "assets/images/ayushman-graph-1.jpg", "alt": "Graph 1" }] }
+          ]
+        },
+        "solution": {
+          "title": "Solution",
+          "icon": "💡",
+          "summary": "Proposed solution & prototype.",
+          "description": "Solution direction championed by Ayushman.",
+          "blocks": [
+            { "type": "text", "heading": "Concept", "paragraphs": ["Describe the solution here."] }
           ]
         }
-      ]
+      }
     },
-    {
-      "id": "transcripts",
-      "title": "Transcripts",
-      "icon": "📝",
-      "summary": "Written transcripts of every interview.",
-      "description": "Verbatim transcripts of every recording in the Audio Recordings archive.",
-      "blocks": [
-        {
-          "type": "files",
-          "heading": "All transcripts",
-          "items": [
-            { "name": "Interview 01 — Transcript", "kind": "pdf", "href": "assets/files/transcript-01.pdf", "sub": "transcript-01.pdf" },
-            { "name": "Interview 02 — Transcript", "kind": "pdf", "href": "assets/files/transcript-02.pdf", "sub": "transcript-02.pdf" }
-          ]
-        }
-      ]
+
+    "aniket": {
+      "name": "Aniket",
+      "id": "SE24UCSE188",
+      "tagline": "Interviewer & journey-map lead",
+      "pages": {
+        "personas": { "title": "Personas", "icon": "🧑‍💻", "summary": "Individual personas.", "description": "Aniket's persona artifacts.", "blocks": [{ "type": "images", "heading": "Personas", "items": [{ "src": "assets/images/aniket-persona-1.jpg", "alt": "Persona" }] }] },
+        "audio-recordings": { "title": "Audio Recordings", "icon": "🎙", "summary": "Raw interview audio.", "description": "Recordings by Aniket.", "blocks": [{ "type": "audio", "heading": "Recordings", "items": [{ "label": "Interview 01", "src": "assets/audio/aniket-01.mp3" }] }] },
+        "transcripts": { "title": "Transcripts", "icon": "📝", "summary": "Verbatim transcripts.", "description": "Aniket's transcripts.", "blocks": [{ "type": "files", "heading": "Transcripts", "items": [{ "name": "Interview 01 — Transcript", "kind": "pdf", "href": "assets/files/aniket-transcript-01.pdf", "sub": "aniket-transcript-01.pdf" }] }] },
+        "consolidated-personas": { "title": "Consolidated Personas", "icon": "👥", "summary": "Merged personas.", "description": "Aniket's consolidated personas.", "blocks": [{ "type": "images", "heading": "Boards", "items": [{ "src": "assets/images/aniket-consol-1.jpg", "alt": "Consolidated" }] }] },
+        "hmw-question": { "title": "HMW Question", "icon": "❓", "summary": "Refined HMW.", "description": "Aniket's HMW framing.", "blocks": [{ "type": "text", "heading": "HMW", "paragraphs": ["Insert Aniket's HMW here."] }] },
+        "journey-map": { "title": "Journey Map", "icon": "🗺", "summary": "User journey.", "description": "Aniket's journey map.", "blocks": [{ "type": "images", "heading": "Journey", "items": [{ "src": "assets/images/aniket-journey.jpg", "alt": "Journey" }] }] },
+        "rca": { "title": "RCA", "icon": "🔬", "summary": "Root cause analysis.", "description": "Aniket's RCA.", "blocks": [{ "type": "text", "heading": "Method", "paragraphs": ["5-Whys + fishbone."] }] },
+        "responses-and-graph-hmw": { "title": "Responses and Graph (HMW)", "icon": "📊", "summary": "Survey responses.", "description": "Aniket's survey graphs.", "blocks": [{ "type": "images", "heading": "Graphs", "items": [{ "src": "assets/images/aniket-graph-1.jpg", "alt": "Graph" }] }] },
+        "solution": { "title": "Solution", "icon": "💡", "summary": "Prototype & concept.", "description": "Aniket's solution direction.", "blocks": [{ "type": "text", "heading": "Concept", "paragraphs": ["Describe the solution."] }] }
+      }
+    },
+
+    "monish": {
+      "name": "Monish",
+      "id": "SE24UCSE153",
+      "tagline": "Data, surveys & RCA",
+      "pages": {
+        "personas": { "title": "Personas", "icon": "🧑‍💻", "summary": "Individual personas.", "description": "Monish's persona artifacts.", "blocks": [{ "type": "images", "heading": "Personas", "items": [{ "src": "assets/images/monish-persona-1.jpg", "alt": "Persona" }] }] },
+        "audio-recordings": { "title": "Audio Recordings", "icon": "🎙", "summary": "Raw interview audio.", "description": "Recordings by Monish.", "blocks": [{ "type": "audio", "heading": "Recordings", "items": [{ "label": "Interview 01", "src": "assets/audio/monish-01.mp3" }] }] },
+        "transcripts": { "title": "Transcripts", "icon": "📝", "summary": "Verbatim transcripts.", "description": "Monish's transcripts.", "blocks": [{ "type": "files", "heading": "Transcripts", "items": [{ "name": "Interview 01 — Transcript", "kind": "pdf", "href": "assets/files/monish-transcript-01.pdf", "sub": "monish-transcript-01.pdf" }] }] },
+        "consolidated-personas": { "title": "Consolidated Personas", "icon": "👥", "summary": "Merged personas.", "description": "Monish's consolidated personas.", "blocks": [{ "type": "images", "heading": "Boards", "items": [{ "src": "assets/images/monish-consol-1.jpg", "alt": "Consolidated" }] }] },
+        "hmw-question": { "title": "HMW Question", "icon": "❓", "summary": "Refined HMW.", "description": "Monish's HMW framing.", "blocks": [{ "type": "text", "heading": "HMW", "paragraphs": ["Insert Monish's HMW."] }] },
+        "journey-map": { "title": "Journey Map", "icon": "🗺", "summary": "User journey.", "description": "Monish's journey map.", "blocks": [{ "type": "images", "heading": "Journey", "items": [{ "src": "assets/images/monish-journey.jpg", "alt": "Journey" }] }] },
+        "rca": { "title": "RCA", "icon": "🔬", "summary": "Root cause analysis.", "description": "Monish's RCA.", "blocks": [{ "type": "text", "heading": "Method", "paragraphs": ["5-Whys + fishbone."] }] },
+        "responses-and-graph-hmw": { "title": "Responses and Graph (HMW)", "icon": "📊", "summary": "Survey responses.", "description": "Monish's survey graphs.", "blocks": [{ "type": "images", "heading": "Graphs", "items": [{ "src": "assets/images/monish-graph-1.jpg", "alt": "Graph" }] }] },
+        "solution": { "title": "Solution", "icon": "💡", "summary": "Prototype & concept.", "description": "Monish's solution direction.", "blocks": [{ "type": "text", "heading": "Concept", "paragraphs": ["Describe the solution."] }] }
+      }
+    },
+
+    "sushanth": {
+      "name": "Sushanth",
+      "id": "SE24UCSE168",
+      "tagline": "Prototyping & solution design",
+      "pages": {
+        "personas": { "title": "Personas", "icon": "🧑‍💻", "summary": "Individual personas.", "description": "Sushanth's persona artifacts.", "blocks": [{ "type": "images", "heading": "Personas", "items": [{ "src": "assets/images/sushanth-persona-1.jpg", "alt": "Persona" }] }] },
+        "audio-recordings": { "title": "Audio Recordings", "icon": "🎙", "summary": "Raw interview audio.", "description": "Recordings by Sushanth.", "blocks": [{ "type": "audio", "heading": "Recordings", "items": [{ "label": "Interview 01", "src": "assets/audio/sushanth-01.mp3" }] }] },
+        "transcripts": { "title": "Transcripts", "icon": "📝", "summary": "Verbatim transcripts.", "description": "Sushanth's transcripts.", "blocks": [{ "type": "files", "heading": "Transcripts", "items": [{ "name": "Interview 01 — Transcript", "kind": "pdf", "href": "assets/files/sushanth-transcript-01.pdf", "sub": "sushanth-transcript-01.pdf" }] }] },
+        "consolidated-personas": { "title": "Consolidated Personas", "icon": "👥", "summary": "Merged personas.", "description": "Sushanth's consolidated personas.", "blocks": [{ "type": "images", "heading": "Boards", "items": [{ "src": "assets/images/sushanth-consol-1.jpg", "alt": "Consolidated" }] }] },
+        "hmw-question": { "title": "HMW Question", "icon": "❓", "summary": "Refined HMW.", "description": "Sushanth's HMW framing.", "blocks": [{ "type": "text", "heading": "HMW", "paragraphs": ["Insert Sushanth's HMW."] }] },
+        "journey-map": { "title": "Journey Map", "icon": "🗺", "summary": "User journey.", "description": "Sushanth's journey map.", "blocks": [{ "type": "images", "heading": "Journey", "items": [{ "src": "assets/images/sushanth-journey.jpg", "alt": "Journey" }] }] },
+        "rca": { "title": "RCA", "icon": "🔬", "summary": "Root cause analysis.", "description": "Sushanth's RCA.", "blocks": [{ "type": "text", "heading": "Method", "paragraphs": ["5-Whys + fishbone."] }] },
+        "responses-and-graph-hmw": { "title": "Responses and Graph (HMW)", "icon": "📊", "summary": "Survey responses.", "description": "Sushanth's survey graphs.", "blocks": [{ "type": "images", "heading": "Graphs", "items": [{ "src": "assets/images/sushanth-graph-1.jpg", "alt": "Graph" }] }] },
+        "solution": { "title": "Solution", "icon": "💡", "summary": "Prototype & concept.", "description": "Sushanth's solution direction.", "blocks": [{ "type": "text", "heading": "Concept", "paragraphs": ["Describe the solution."] }] }
+      }
+    },
+
+    "shiven": {
+      "name": "Shiven",
+      "id": "SE24UCSE187",
+      "tagline": "Synthesis & documentation",
+      "pages": {
+        "personas": { "title": "Personas", "icon": "🧑‍💻", "summary": "Individual personas.", "description": "Shiven's persona artifacts.", "blocks": [{ "type": "images", "heading": "Personas", "items": [{ "src": "assets/images/shiven-persona-1.jpg", "alt": "Persona" }] }] },
+        "audio-recordings": { "title": "Audio Recordings", "icon": "🎙", "summary": "Raw interview audio.", "description": "Recordings by Shiven.", "blocks": [{ "type": "audio", "heading": "Recordings", "items": [{ "label": "Interview 01", "src": "assets/audio/shiven-01.mp3" }] }] },
+        "transcripts": { "title": "Transcripts", "icon": "📝", "summary": "Verbatim transcripts.", "description": "Shiven's transcripts.", "blocks": [{ "type": "files", "heading": "Transcripts", "items": [{ "name": "Interview 01 — Transcript", "kind": "pdf", "href": "assets/files/shiven-transcript-01.pdf", "sub": "shiven-transcript-01.pdf" }] }] },
+        "consolidated-personas": { "title": "Consolidated Personas", "icon": "👥", "summary": "Merged personas.", "description": "Shiven's consolidated personas.", "blocks": [{ "type": "images", "heading": "Boards", "items": [{ "src": "assets/images/shiven-consol-1.jpg", "alt": "Consolidated" }] }] },
+        "hmw-question": { "title": "HMW Question", "icon": "❓", "summary": "Refined HMW.", "description": "Shiven's HMW framing.", "blocks": [{ "type": "text", "heading": "HMW", "paragraphs": ["Insert Shiven's HMW."] }] },
+        "journey-map": { "title": "Journey Map", "icon": "🗺", "summary": "User journey.", "description": "Shiven's journey map.", "blocks": [{ "type": "images", "heading": "Journey", "items": [{ "src": "assets/images/shiven-journey.jpg", "alt": "Journey" }] }] },
+        "rca": { "title": "RCA", "icon": "🔬", "summary": "Root cause analysis.", "description": "Shiven's RCA.", "blocks": [{ "type": "text", "heading": "Method", "paragraphs": ["5-Whys + fishbone."] }] },
+        "responses-and-graph-hmw": { "title": "Responses and Graph (HMW)", "icon": "📊", "summary": "Survey responses.", "description": "Shiven's survey graphs.", "blocks": [{ "type": "images", "heading": "Graphs", "items": [{ "src": "assets/images/shiven-graph-1.jpg", "alt": "Graph" }] }] },
+        "solution": { "title": "Solution", "icon": "💡", "summary": "Prototype & concept.", "description": "Shiven's solution direction.", "blocks": [{ "type": "text", "heading": "Concept", "paragraphs": ["Describe the solution."] }] }
+      }
     }
-  ]
+  }
 }
