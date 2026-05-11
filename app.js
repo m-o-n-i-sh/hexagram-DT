@@ -1,20 +1,14 @@
 /* ============================================
    HexaGram — JSON-driven routing & rendering
-   URL params:
-     member.html?member=<id>            → list of pages for a member
-     project-template.html?member=<id>&page=<pageId>
    ============================================ */
 window.HG = (function () {
-  // Group leader (Akash) is NOT a folder — only the other 5 members.
-  const FOLDERS = ['ayushman', 'aniket', 'monish', 'sushanth', 'shiven'];
-
   const TEAM = [
-    { name: 'Akash',    id: 'SE24UCSE220', role: 'Group Leader', initial: 'A', leader: true, folder: null },
-    { name: 'Ayushman', id: 'SE24UCSE258', role: 'Member',       initial: 'A', folder: 'ayushman' },
-    { name: 'Aniket',   id: 'SE24UCSE188', role: 'Member',       initial: 'A', folder: 'aniket' },
-    { name: 'Monish',   id: 'SE24UCSE153', role: 'Member',       initial: 'M', folder: 'monish' },
-    { name: 'Sushanth', id: 'SE24UCSE168', role: 'Member',       initial: 'S', folder: 'sushanth' },
-    { name: 'Shiven',   id: 'SE24UCSE187', role: 'Member',       initial: 'S', folder: 'shiven' }
+    { name: 'Akash',    id: 'SE24UCSE220', role: 'Group Leader', initial: 'A', leader: true },
+    { name: 'Ayushman', id: 'SE24UCSE258', role: 'Member',       initial: 'A' },
+    { name: 'Aniket',   id: 'SE24UCSE188', role: 'Member',       initial: 'A' },
+    { name: 'Monish',   id: 'SE24UCSE153', role: 'Member',       initial: 'M' },
+    { name: 'Sushanth', id: 'SE24UCSE168', role: 'Member',       initial: 'S' },
+    { name: 'Shiven',   id: 'SE24UCSE187', role: 'Member',       initial: 'S' }
   ];
 
   async function loadContent() {
@@ -29,8 +23,8 @@ window.HG = (function () {
     }[c]));
   }
 
-  /* ---------- HOME: render member folders + team ---------- */
-  async function renderHome(folderSel, teamSel) {
+  async function renderHome(catSel, teamSel) {
+    // Team
     const teamEl = document.querySelector(teamSel);
     if (teamEl) {
       teamEl.innerHTML = TEAM.map(m => `
@@ -46,124 +40,62 @@ window.HG = (function () {
       `).join('');
     }
 
-    const folderEl = document.querySelector(folderSel);
-    if (!folderEl) return;
+    // Categories
+    const catEl = document.querySelector(catSel);
+    if (!catEl) return;
     try {
       const data = await loadContent();
-      const members = data.members || {};
-      const cards = FOLDERS.map((key, i) => {
-        const m = members[key];
-        if (!m) return '';
-        const initial = m.name.charAt(0).toUpperCase();
-        const count = Object.keys(m.pages || {}).length;
-        return `
-          <a class="folder-card" href="member.html?member=${encodeURIComponent(key)}">
-            <span class="num">${String(i + 1).padStart(2, '0')}</span>
-            <div class="folder-icon">${initial}</div>
-            <h3>${escapeHtml(m.name)}</h3>
-            <div class="meta">${escapeHtml(m.tagline || m.id)}</div>
-            <span class="arrow">${count} deliverables →</span>
-          </a>
-        `;
-      }).join('');
-      folderEl.innerHTML = cards || '<div class="loading">No member folders found.</div>';
-    } catch (e) {
-      folderEl.innerHTML = `<div class="loading">Could not load folders. ${escapeHtml(e.message)}</div>`;
-    }
-  }
-
-  /* ---------- MEMBER: list of pages for a specific member ---------- */
-  async function renderMember() {
-    const params = new URLSearchParams(location.search);
-    const member = params.get('member');
-    const titleEl = document.getElementById('memberTitle');
-    const crumbEl = document.getElementById('crumbMember');
-    const descEl  = document.getElementById('memberDesc');
-    const grid    = document.getElementById('memberGrid');
-
-    if (!member) {
-      titleEl.textContent = 'No member selected';
-      grid.innerHTML = '<p class="empty">Add ?member=&lt;id&gt; to the URL.</p>';
-      return;
-    }
-
-    try {
-      const data = await loadContent();
-      const m = (data.members || {})[member];
-      if (!m) {
-        titleEl.textContent = 'Member not found';
-        crumbEl.textContent = 'Not found';
-        grid.innerHTML = `<p class="empty">No member with id "${escapeHtml(member)}" in content.json.</p>`;
-        return;
-      }
-      document.title = `${m.name} — HexaGram`;
-      titleEl.innerHTML = `<span class="gradient">${escapeHtml(m.name)}</span>'s folder`;
-      if (crumbEl) crumbEl.textContent = m.name;
-      if (descEl)  descEl.textContent = m.tagline || `Deliverables produced by ${m.name}.`;
-
-      const pages = m.pages || {};
-      const entries = Object.entries(pages);
-      grid.innerHTML = entries.map(([pageId, p], i) => `
-        <a class="cat-card"
-           href="project-template.html?member=${encodeURIComponent(member)}&page=${encodeURIComponent(pageId)}">
+      const cats = data.categories || [];
+      catEl.innerHTML = cats.map((c, i) => `
+        <a class="cat-card" href="project-template.html?id=${encodeURIComponent(c.id)}">
           <span class="num">${String(i + 1).padStart(2, '0')}</span>
-          <div class="cat-icon">${p.icon || '◇'}</div>
-          <h3>${escapeHtml(p.title)}</h3>
-          <p>${escapeHtml(p.summary || '')}</p>
+          <div>
+            <div class="cat-icon">${c.icon || '◇'}</div>
+            <h3>${escapeHtml(c.title)}</h3>
+            <p>${escapeHtml(c.summary || '')}</p>
+          </div>
           <span class="arrow">View →</span>
         </a>
-      `).join('') || '<p class="empty">No deliverables yet.</p>';
+      `).join('');
     } catch (e) {
-      grid.innerHTML = `<p class="empty">Failed to load: ${escapeHtml(e.message)}</p>`;
+      catEl.innerHTML = `<div class="loading">Could not load categories. ${escapeHtml(e.message)}</div>`;
     }
   }
 
-  /* ---------- TEMPLATE: render a specific page within a member ---------- */
   async function renderTemplate() {
     const params = new URLSearchParams(location.search);
-    const member = params.get('member');
-    const page   = params.get('page');
+    const id = params.get('id');
     const titleEl = document.getElementById('pageTitle');
-    const crumbMemEl = document.getElementById('crumbMember');
     const crumbEl = document.getElementById('crumbTitle');
     const descEl  = document.getElementById('pageDesc');
     const body    = document.getElementById('pageContent');
 
-    if (!member || !page) {
-      titleEl.textContent = 'Missing parameters';
-      body.innerHTML = '<p class="empty">URL must contain ?member=&lt;id&gt;&amp;page=&lt;pageId&gt;.</p>';
+    if (!id) {
+      titleEl.textContent = 'No category selected';
+      crumbEl.textContent = '—';
+      body.innerHTML = '<p class="empty">Add a ?id=&lt;category-id&gt; parameter to the URL.</p>';
       return;
     }
 
     try {
       const data = await loadContent();
-      const m = (data.members || {})[member];
-      if (!m) {
-        titleEl.textContent = 'Member not found';
-        body.innerHTML = `<p class="empty">No member "${escapeHtml(member)}".</p>`;
+      const cat = (data.categories || []).find(c => c.id === id);
+      if (!cat) {
+        titleEl.textContent = 'Not found';
+        crumbEl.textContent = 'Not found';
+        body.innerHTML = `<p class="empty">No category with id "${escapeHtml(id)}" in content.json.</p>`;
         return;
       }
-      const p = (m.pages || {})[page];
-      if (!p) {
-        titleEl.textContent = 'Page not found';
-        body.innerHTML = `<p class="empty">No page "${escapeHtml(page)}" for ${escapeHtml(m.name)}.</p>`;
-        return;
-      }
+      document.title = `${cat.title} — HexaGram`;
+      titleEl.textContent = cat.title;
+      crumbEl.textContent = cat.title;
+      descEl.textContent  = cat.description || '';
 
-      document.title = `${p.title} — ${m.name} — HexaGram`;
-      titleEl.textContent = p.title;
-      if (crumbMemEl) {
-        crumbMemEl.textContent = m.name;
-        crumbMemEl.setAttribute('href', `member.html?member=${encodeURIComponent(member)}`);
-      }
-      if (crumbEl) crumbEl.textContent = p.title;
-      if (descEl)  descEl.textContent  = p.description || '';
-
-      const blocks = (p.blocks || []).map(renderBlock).join('');
+      const blocks = (cat.blocks || []).map(renderBlock).join('');
       body.classList.remove('loading');
-      body.innerHTML = blocks || '<p class="empty">No content yet. Add blocks in content.json.</p>';
+      body.innerHTML = blocks || '<p class="empty">No content yet. Add blocks to this category in content.json.</p>';
     } catch (e) {
-      body.innerHTML = `<p class="empty">Failed to load: ${escapeHtml(e.message)}</p>`;
+      body.innerHTML = `<p class="empty">Failed to load content: ${escapeHtml(e.message)}</p>`;
     }
   }
 
@@ -200,7 +132,7 @@ window.HG = (function () {
                   <div class="name">${escapeHtml(it.name)}</div>
                   <div class="sub">${escapeHtml(it.sub || it.href)}</div>
                 </span>
-                <span class="arrow" style="color:var(--red);font-family:var(--font-mono);font-size:.85rem">↗</span>
+                <span class="arrow" style="color:var(--accent);font-family:var(--font-mono);font-size:.85rem">↗</span>
               </a>
             `).join('')}
           </div>
@@ -227,5 +159,5 @@ window.HG = (function () {
     }
   }
 
-  return { renderHome, renderMember, renderTemplate };
+  return { renderHome, renderTemplate };
 })();
