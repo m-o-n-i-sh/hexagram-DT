@@ -11,16 +11,26 @@
           "type": "text",
           "heading": "Overview",
           "paragraphs": [
-            "This archive contains the original audio captured during our user interviews. Recordings are uploaded as the team gathers them.",
-            "To add a new recording: drop the file into assets/audio/ in the repo and append a new entry under the audio block below."
+            "This archive contains the original audio captured during our user interviews."
           ]
         },
         {
           "type": "audio",
           "heading": "Recordings",
+          "filterByPerson": true,
           "items": [
-            { "label": "Interview 01 — Participant A", "src": "assets/audio/interview-01.mp3" },
-            { "label": "Interview 02 — Participant B", "src": "assets/audio/interview-02.mp3" }
+            { "label": "Recording 1 — Shiven",    "src": "assets/audio/interview-shiven.mp4",     "person": "Shiven" },
+            { "label": "Recording 1 — Ayushman",  "src": "assets/audio/interview-ayushman-1.mp4", "person": "Ayushman" },
+            { "label": "Recording 2 — Ayushman",  "src": "assets/audio/interview-ayushman-2.mp4", "person": "Ayushman" },
+            { "label": "Recording 3 — Ayushman",  "src": "assets/audio/interview-ayushman-3.mp4", "person": "Ayushman" },
+            { "label": "Recording 1 — Monish",    "src": "assets/audio/interview-monish-1.mp4",   "person": "Monish" },
+            { "label": "Recording 2 — Monish",    "src": "assets/audio/interview-monish-2.mp4",   "person": "Monish" },
+            { "label": "Recording 3 — Monish",    "src": "assets/audio/interview-monish-3.mp4",   "person": "Monish" },
+            { "label": "Recording 1 — Aniket",    "src": "assets/audio/interview-aniket-1.mp4",   "person": "Aniket" },
+            { "label": "Recording 2 — Aniket",    "src": "assets/audio/interview-aniket-2.mp4",   "person": "Aniket" },
+            { "label": "Recording 1 — Sushanth",  "src": "assets/audio/interview-sushanth-1.wav", "person": "Sushanth" },
+            { "label": "Recording 2 — Sushanth",  "src": "assets/audio/interview-sushanth-2.wav", "person": "Sushanth" },
+            { "label": "Recording 3 — Sushanth",  "src": "assets/audio/interview-sushanth-3.wav", "person": "Sushanth" }
           ]
         }
       ]
@@ -43,8 +53,25 @@
           "type": "images",
           "heading": "Consolidated persona boards",
           "items": [
-            { "src": "assets/images/persona-1.jpg", "alt": "Consolidated persona 1", "caption": "Persona 01 — primary user" },
-            { "src": "assets/images/persona-2.jpg", "alt": "Consolidated persona 2", "caption": "Persona 02 — secondary user" }
+            { "src": "assets/images/consolidated-p1.jpg", "alt": "Consolidated Persona 1", "caption": "Consolidated Persona 01" },
+            { "src": "assets/images/consolidated-p2.jpg", "alt": "Consolidated Persona 2", "caption": "Consolidated Persona 02" },
+            { "src": "assets/images/consolidated-p3.jpg", "alt": "Consolidated Persona 3", "caption": "Consolidated Persona 03" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "personas-comparison-chart",
+      "title": "Personas Comparison Chart",
+      "icon": "📊",
+      "summary": "A side-by-side comparison of all personas across key dimensions.",
+      "description": "A chart mapping all personas against shared attributes to identify patterns and differences.",
+      "blocks": [
+        {
+          "type": "images",
+          "heading": "Comparison chart",
+          "items": [
+            { "src": "assets/images/consolidated-chart.jpg", "alt": "Personas Comparison Chart", "caption": "Personas comparison across key dimensions" }
           ]
         }
       ]
@@ -57,17 +84,10 @@
       "description": "The How Might We question that anchors our project and the reasoning behind its framing.",
       "blocks": [
         {
-          "type": "text",
-          "heading": "Our HMW",
-          "paragraphs": [
-            "How might we [insert your final HMW question here] — phrased to be broad enough to invite ideation but narrow enough to anchor a solution."
-          ]
-        },
-        {
-          "type": "text",
-          "heading": "Why this framing",
-          "paragraphs": [
-            "We tested multiple framings against our consolidated personas. This one consistently surfaced the highest-quality ideas during our brainstorming sessions."
+          "type": "images",
+          "heading": "Top HMW Questions",
+          "items": [
+            { "src": "assets/images/hmw-questions.jpg", "alt": "Top 10 HMW Questions", "caption": "Top 10 HMW questions shortlisted by the team" }
           ]
         }
       ]
@@ -76,14 +96,16 @@
       "id": "journey-map",
       "title": "Journey Map",
       "icon": "🗺",
-      "summary": "The end-to-end experience of our primary persona.",
+      "summary": "The end-to-end experience of our primary personas.",
       "description": "A visualization of touchpoints, emotions, and friction points across the user journey.",
       "blocks": [
         {
           "type": "images",
-          "heading": "Primary user journey",
+          "heading": "User journey maps",
           "items": [
-            { "src": "assets/images/journey-map.jpg", "alt": "Journey map", "caption": "End-to-end journey for our primary persona" }
+            { "src": "assets/images/journey-map-p1.jpg", "alt": "Journey Map P1", "caption": "P1 — Impulsive Sharer" },
+            { "src": "assets/images/journey-map-p2.jpg", "alt": "Journey Map P2", "caption": "P2 — Cautious Verifier" },
+            { "src": "assets/images/journey-map-p3.jpg", "alt": "Journey Map P3", "caption": "P3 — Anxious Consumer" }
           ]
         }
       ]
@@ -98,10 +120,24 @@
         {
           "type": "images",
           "heading": "Individual personas",
+          "filterByPerson": true,
           "items": [
-            { "src": "assets/images/persona-raw-1.jpg", "alt": "Persona 1" },
-            { "src": "assets/images/persona-raw-2.jpg", "alt": "Persona 2" },
-            { "src": "assets/images/persona-raw-3.jpg", "alt": "Persona 3" }
+            { "src": "assets/images/persona-shiven-1.jpg",   "alt": "Persona Shiven 1",   "person": "Shiven" },
+            { "src": "assets/images/persona-shiven-2.jpg",   "alt": "Persona Shiven 2",   "person": "Shiven" },
+            { "src": "assets/images/persona-shiven-3.jpg",   "alt": "Persona Shiven 3",   "person": "Shiven" },
+            { "src": "assets/images/persona-ayushman-1.jpg", "alt": "Persona Ayushman 1", "person": "Ayushman" },
+            { "src": "assets/images/persona-ayushman-2.jpg", "alt": "Persona Ayushman 2", "person": "Ayushman" },
+            { "src": "assets/images/persona-ayushman-3.jpg", "alt": "Persona Ayushman 3", "person": "Ayushman" },
+            { "src": "assets/images/persona-monish-1.jpg",   "alt": "Persona Monish 1",   "person": "Monish" },
+            { "src": "assets/images/persona-monish-2.jpg",   "alt": "Persona Monish 2",   "person": "Monish" },
+            { "src": "assets/images/persona-monish-3.jpg",   "alt": "Persona Monish 3",   "person": "Monish" },
+            { "src": "assets/images/persona-aniket-1.jpg",   "alt": "Persona Aniket 1",   "person": "Aniket" },
+            { "src": "assets/images/persona-aniket-2.jpg",   "alt": "Persona Aniket 2",   "person": "Aniket" },
+            { "src": "assets/images/persona-aniket-3.jpg",   "alt": "Persona Aniket 3",   "person": "Aniket" },
+            { "src": "assets/images/persona-sushanth-1.jpg", "alt": "Persona Sushanth 1", "person": "Sushanth" },
+            { "src": "assets/images/persona-sushanth-2.jpg", "alt": "Persona Sushanth 2", "person": "Sushanth" },
+            { "src": "assets/images/persona-sushanth-3.jpg", "alt": "Persona Sushanth 3", "person": "Sushanth" },
+            { "src": "assets/images/persona-sushanth-4.jpg", "alt": "Persona Sushanth 4", "person": "Sushanth" }
           ]
         }
       ]
@@ -114,18 +150,10 @@
       "description": "A structured breakdown of the underlying causes that produce the symptoms our users report.",
       "blocks": [
         {
-          "type": "text",
-          "heading": "Method",
-          "paragraphs": [
-            "We used the 5-Whys technique combined with a fishbone diagram to trace surface-level complaints back to systemic root causes."
-          ]
-        },
-        {
           "type": "images",
           "heading": "RCA artifacts",
           "items": [
-            { "src": "assets/images/rca-fishbone.jpg", "alt": "Fishbone diagram", "caption": "Fishbone diagram" },
-            { "src": "assets/images/rca-5whys.jpg", "alt": "5 Whys", "caption": "5 Whys chain" }
+            { "src": "assets/images/rca-diagram.jpg", "alt": "Root Cause Analysis Diagram", "caption": "Root Cause Analysis diagram" }
           ]
         }
       ]
@@ -141,15 +169,19 @@
           "type": "images",
           "heading": "Survey results",
           "items": [
-            { "src": "assets/images/graph-1.jpg", "alt": "Graph 1", "caption": "Distribution of responses by segment" },
-            { "src": "assets/images/graph-2.jpg", "alt": "Graph 2", "caption": "Severity rating breakdown" }
+            { "src": "assets/images/hmw-graph.jpg", "alt": "HMW Response Graph", "caption": "Distribution of HMW responses" }
           ]
         },
         {
+          "type": "embed",
+          "heading": "Q2 Ideas — All Groups",
+          "src": "https://docs.google.com/spreadsheets/d/1eEZHIXoIgmeaMk8WRKQPxizwWElF8eSf/pubhtml?widget=true&headers=false"
+        },
+        {
           "type": "files",
-          "heading": "Raw data",
+          "heading": "Download",
           "items": [
-            { "name": "HMW survey responses (CSV)", "kind": "csv", "href": "assets/files/hmw-responses.csv", "sub": "hmw-responses.csv" }
+            { "name": "Q2 Ideas Grouped (XLSX)", "kind": "xlsx", "href": "assets/files/hmw-responses.xlsx", "sub": "hmw-responses.xlsx" }
           ]
         }
       ]
@@ -158,22 +190,81 @@
       "id": "solution",
       "title": "Solution",
       "icon": "💡",
-      "summary": "Our proposed solution and prototype.",
-      "description": "The concept, the prototype, and the reasoning that brought us here.",
+      "summary": "Shield Content Warning — a Chrome extension that detects and flags misinformation in real time.",
+      "description": "From 1,080 raw ideas down to one working MVP: how we arrived at the Shield Content Warning extension.",
       "blocks": [
         {
           "type": "text",
-          "heading": "The concept",
+          "heading": "Problem Statement",
           "paragraphs": [
-            "Describe your solution here — what it is, who it's for, and the core insight that makes it work."
+            "Our problem statement focused on Algorithmic Amplification of Misinformation on Social Media. After conducting interviews, creating personas, journey maps, and root cause analysis, we moved into the ideation stage to generate possible solutions."
           ]
         },
         {
-          "type": "images",
-          "heading": "Prototype",
+          "type": "text",
+          "heading": "Ideation Process",
+          "paragraphs": [
+            "We used the 6-3-5 Brainwriting Method with 10 different How Might We (HMW) questions created from the root causes identified earlier. In this method, 6 members generated 3 ideas every 5 minutes across multiple rounds, producing around 1,080 raw ideas.",
+            "From these, we filtered and analysed nearly 900 useful ideas by categorising them based on Feasibility (can it realistically be built?), Viability (can it sustain and function effectively?), and Desirability (would users actually want it?).",
+            "We also divided ideas into short-term, medium-term, and long-term solutions. To narrow further, we plotted all ideas on a graph — X-axis: Effort required, Y-axis: Value provided — and focused only on the second quadrant (high value, lower effort). This reduced the set to around 514 strong ideas, which were then grouped into three final solution groups."
+          ]
+        },
+        {
+          "type": "text",
+          "heading": "Three Final Solution Groups",
+          "paragraphs": [
+            "Group A — Warning Shield: A browser/Chrome extension that detects suspicious or misleading content and overlays warning indicators directly on webpages.",
+            "Group B — Truth Finder: An on-demand fact-checking tool that verifies claims using trusted sources and provides quick debunks.",
+            "Group C — Credibility Coach: A gamified media literacy platform that encourages responsible sharing and teaches users how to identify misinformation."
+          ]
+        },
+        {
+          "type": "text",
+          "heading": "Why We Chose Group A",
+          "paragraphs": [
+            "Out of the three groups, we selected Group A: Warning Shield because it was the most feasible solution to build within the available time, it works directly during browsing making the experience real-time and practical, it does not require user accounts, backend servers, or paid APIs, it aligns strongly with our core problem of algorithmically amplified misinformation, and it can be developed as a fully working MVP using only HTML, CSS, and JavaScript."
+          ]
+        },
+        {
+          "type": "text",
+          "heading": "About the Extension",
+          "paragraphs": [
+            "The final solution is a Chrome extension called Shield Content Warning. The extension passively scans webpage content while the user browses and identifies suspicious patterns such as urgency manipulation, emotional manipulation, unverified claims, conspiracy framing, misleading statistics, and obscured sources.",
+            "When suspicious content is detected, the extension highlights it with warning indicators, displays contextual explanations, blurs high-severity misinformation, shows credibility information through overlays, and provides quick access to fact-checking resources.",
+            "The extension also includes sensitivity controls, site whitelisting, dismiss functionality, and a popup dashboard showing flagged content count."
+          ]
+        },
+        {
+          "type": "text",
+          "heading": "How the Extension Works",
+          "paragraphs": [
+            "The extension scans visible text on webpages using a content script and compares it against predefined misinformation signal patterns stored locally. Matching content is assigned a severity score — Low, Medium, or High — and suspicious sections are visually flagged using overlays and badges.",
+            "High-severity content is blurred until the user chooses to reveal it. A popup dashboard summarises all flagged passages on the current page. The entire system runs locally in the browser without requiring external APIs or servers."
+          ]
+        },
+        {
+          "type": "text",
+          "heading": "How to Install",
+          "paragraphs": [
+            "1. Download the ZIP file using the link below.",
+            "2. Extract the ZIP file.",
+            "3. Open Google Chrome and go to: chrome://extensions/",
+            "4. Enable Developer Mode from the top right corner.",
+            "5. Click the 'Load unpacked' button.",
+            "6. Select the extracted extension folder containing the manifest.json file.",
+            "The extension will now be installed and ready to use."
+          ]
+        },
+        {
+          "type": "files",
+          "heading": "Download",
           "items": [
-            { "src": "assets/images/prototype-1.jpg", "alt": "Prototype screen 1" },
-            { "src": "assets/images/prototype-2.jpg", "alt": "Prototype screen 2" }
+            {
+              "name": "Shield Content Warning Extension (ZIP)",
+              "kind": "zip",
+              "href": "https://drive.google.com/file/d/1_i70DwyURJ42mcSJP4Mb6WTZuIx7PuiR/view?usp=share_link",
+              "sub": "Download from Google Drive"
+            }
           ]
         }
       ]
@@ -188,9 +279,13 @@
         {
           "type": "files",
           "heading": "All transcripts",
+          "filterByPerson": true,
           "items": [
-            { "name": "Interview 01 — Transcript", "kind": "pdf", "href": "assets/files/transcript-01.pdf", "sub": "transcript-01.pdf" },
-            { "name": "Interview 02 — Transcript", "kind": "pdf", "href": "assets/files/transcript-02.pdf", "sub": "transcript-02.pdf" }
+            { "name": "Transcript — Shiven",   "kind": "txt", "href": "assets/files/transcript-shiven.txt",    "sub": "transcript-shiven.txt",    "person": "Shiven" },
+            { "name": "Transcript — Ayushman", "kind": "pdf", "href": "assets/files/transcript-ayushman.pdf",  "sub": "transcript-ayushman.pdf",  "person": "Ayushman" },
+            { "name": "Transcript — Monish",   "kind": "pdf", "href": "assets/files/transcript-monish.pdf",    "sub": "transcript-monish.pdf",    "person": "Monish" },
+            { "name": "Transcript — Aniket",   "kind": "pdf", "href": "assets/files/transcript-aniket.pdf",    "sub": "transcript-aniket.pdf",    "person": "Aniket" },
+            { "name": "Transcript — Sushanth", "kind": "pdf", "href": "assets/files/transcript-sushanth.pdf",  "sub": "transcript-sushanth.pdf",  "person": "Sushanth" }
           ]
         }
       ]

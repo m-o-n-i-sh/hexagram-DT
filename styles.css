@@ -420,6 +420,60 @@ img { max-width: 100%; display: block; }
 .audio-item .label { font-weight: 500; margin-bottom: 10px; }
 .audio-item audio { width: 100%; }
 
+/* ---------- Audio Person Filter ---------- */
+.person-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.person-filter-card {
+  padding: 24px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s;
+  color: var(--text);
+  font-family: var(--font-body);
+}
+.person-filter-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.person-filter-avatar {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  background: var(--gradient);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700; font-size: 1.4rem;
+  color: #0b1020;
+  margin: 0 auto 12px;
+}
+.person-filter-name {
+  font-family: var(--font-display);
+  font-weight: 600; font-size: 1rem;
+  margin-bottom: 6px;
+}
+.person-filter-count {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase; letter-spacing: 0.08em;
+}
+.audio-filter-header {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 24px;
+}
+#audio-person-label {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
 /* ---------- Footer ---------- */
 .footer {
   border-top: 1px solid var(--border);
