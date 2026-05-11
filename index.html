@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HexaGram — Design Thinking Project</title>
+  <meta name="description" content="HexaGram is a six-member CSE engineering group exploring design thinking through research, personas, and solution prototyping." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-name">Hexa<span>Gram</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About the Course</a>
+        <a href="mentors.html">Mentors</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow"><span class="dot"></span> Design Thinking · CSE · Mahindra University</span>
+      <h1>Six minds.<br/>One <span class="gradient">HexaGram</span>.</h1>
+      <p class="lead">A computer science engineering project group documenting our design thinking journey — from raw user research to a working solution.</p>
+      <div class="hero-cta">
+        <a href="#explore" class="btn btn-primary">Explore the work →</a>
+        <a href="about.html" class="btn">About the course</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="explore">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">/ project archive</span>
+        <h2>Explore by category</h2>
+        <p>Every artifact from our design thinking process — organized, archived, and accessible.</p>
+      </div>
+      <div class="cat-grid" id="categoryGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">/ the team</span>
+        <h2>Meet HexaGram</h2>
+        <p>Six engineers, one mission — to think like designers and build like makers.</p>
+      </div>
+      <div class="team-grid" id="teamGrid"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2026 HexaGram · Mahindra University</div>
+      <div>// built with curiosity</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Render category grid + team on home page
+    document.addEventListener('DOMContentLoaded', () => {
+      HG.renderHome('#categoryGrid', '#teamGrid');
+    });
+  </script>
+</body>
+</html>
