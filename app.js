@@ -47,22 +47,22 @@ window.HG = (function () {
       bio: 'Contributed to the research, ideation, and build phases across the project, with a particular hand in the poster and website work that made the group\'s output presentable. Part of the team that took 1080 raw ideas and filtered them down to something actually buildable — and then helped build it.'
     }
   ];
- 
+
   let _filterItems = [];
   let _filterType  = '';
- 
+
   async function loadContent() {
     const res = await fetch('content/content.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error('Failed to load content.json');
     return res.json();
   }
- 
+
   function escapeHtml(str) {
     return String(str || '').replace(/[&<>"']/g, c => ({
       '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
     }[c]));
   }
- 
+
   /* ---- Lightbox ---- */
   function _initLightbox() {
     if (document.getElementById('hg-lightbox')) return;
@@ -78,10 +78,10 @@ window.HG = (function () {
         <div class="lb-caption"></div>
       </div>`;
     document.body.appendChild(lb);
- 
+
     let _imgs = [];
     let _idx  = 0;
- 
+
     function show(idx) {
       _idx = (idx + _imgs.length) % _imgs.length;
       const it = _imgs[_idx];
@@ -95,7 +95,7 @@ window.HG = (function () {
       lb.classList.remove('lb-open');
       document.body.style.overflow = '';
     }
- 
+
     lb.querySelector('.lb-backdrop').addEventListener('click', close);
     lb.querySelector('.lb-close').addEventListener('click', close);
     lb.querySelector('.lb-prev').addEventListener('click', () => show(_idx - 1));
@@ -106,14 +106,14 @@ window.HG = (function () {
       if (e.key === 'ArrowLeft')   show(_idx - 1);
       if (e.key === 'ArrowRight')  show(_idx + 1);
     });
- 
+
     // Expose opener
     window._hgLightboxOpen = function(imgs, startIdx) {
       _imgs = imgs;
       show(startIdx);
     };
   }
- 
+
   function _attachLightbox(containerEl) {
     const figures = containerEl.querySelectorAll('figure img, .lb-trigger');
     if (!figures.length) return;
@@ -127,10 +127,10 @@ window.HG = (function () {
       img.addEventListener('click', () => window._hgLightboxOpen(imgs, i));
     });
   }
- 
+
   async function renderHome(catSel, teamSel) {
     _initLightbox();
- 
+
     // Team
     const teamEl = document.querySelector(teamSel);
     if (teamEl) {
@@ -147,7 +147,7 @@ window.HG = (function () {
         </div>
       `).join('');
     }
- 
+
     // Categories
     const catEl = document.querySelector(catSel);
     if (!catEl) return;
@@ -169,24 +169,24 @@ window.HG = (function () {
       catEl.innerHTML = `<div class="loading">Could not load categories. ${escapeHtml(e.message)}</div>`;
     }
   }
- 
+
   async function renderTemplate() {
     _initLightbox();
- 
+
     const params = new URLSearchParams(location.search);
     const id = params.get('id');
     const titleEl = document.getElementById('pageTitle');
     const crumbEl = document.getElementById('crumbTitle');
     const descEl  = document.getElementById('pageDesc');
     const body    = document.getElementById('pageContent');
- 
+
     if (!id) {
       titleEl.textContent = 'No category selected';
       crumbEl.textContent = '—';
       body.innerHTML = '<p class="empty">Add a ?id=&lt;category-id&gt; parameter to the URL.</p>';
       return;
     }
- 
+
     try {
       const data = await loadContent();
       const cat = (data.categories || []).find(c => c.id === id);
@@ -200,7 +200,7 @@ window.HG = (function () {
       titleEl.textContent = cat.title;
       crumbEl.textContent = cat.title;
       descEl.textContent  = cat.description || '';
- 
+
       const blocks = (cat.blocks || []).map(renderBlock).join('');
       body.classList.remove('loading');
       body.innerHTML = blocks || '<p class="empty">No content yet. Add blocks to this category in content.json.</p>';
@@ -211,7 +211,7 @@ window.HG = (function () {
       body.innerHTML = `<p class="empty">Failed to load content: ${escapeHtml(e.message)}</p>`;
     }
   }
- 
+
   function _personPickerHtml(items, type, heading, singular) {
     _filterItems = items;
     _filterType  = type;
@@ -246,7 +246,7 @@ window.HG = (function () {
       </div>
     </div>`;
   }
- 
+
   function _renderFilteredItems(items) {
     if (!items.length) return '<p class="empty">Nothing here yet.</p>';
     if (_filterType === 'audio') {
@@ -295,7 +295,7 @@ window.HG = (function () {
     }
     return '';
   }
- 
+
   function renderBlock(b) {
     switch (b.type) {
       case 'text':
@@ -367,7 +367,7 @@ window.HG = (function () {
         return '';
     }
   }
- 
+
   async function _setupExcel() {
     const blocks = document.querySelectorAll('[data-excel-src]');
     for (const block of blocks) {
@@ -376,23 +376,23 @@ window.HG = (function () {
         const res = await fetch(src, { cache: 'no-cache' });
         const buf = await res.arrayBuffer();
         const wb  = XLSX.read(buf, { type: 'array' });
- 
+
         function renderSheet(idx) {
           block.querySelectorAll('.excel-tab').forEach((t, i) => t.classList.toggle('excel-tab-active', i === idx));
           const ws   = wb.Sheets[wb.SheetNames[idx]];
           const html = XLSX.utils.sheet_to_html(ws, { header: '', footer: '' });
           block.querySelector('.excel-table-wrap').innerHTML = html;
         }
- 
+
         const tabsHtml = wb.SheetNames.map((n, i) =>
           `<button class="excel-tab${i === 0 ? ' excel-tab-active' : ''}" data-idx="${i}">${escapeHtml(n)}</button>`
         ).join('');
- 
+
         block.querySelector('.excel-loading').outerHTML =
           `<div class="excel-tabs">${tabsHtml}</div><div class="excel-table-wrap"></div>`;
- 
+
         renderSheet(0);
- 
+
         block.querySelector('.excel-tabs').addEventListener('click', e => {
           const btn = e.target.closest('[data-idx]');
           if (btn) renderSheet(Number(btn.dataset.idx));
@@ -402,16 +402,16 @@ window.HG = (function () {
       }
     }
   }
- 
+
   function _setupPersonFilter() {
     const personView  = document.getElementById('person-filter-view');
     const resultsView = document.getElementById('person-results-view');
     if (!personView || !resultsView) return;
- 
+
     const backBtn = document.getElementById('person-back-btn');
     const labelEl = document.getElementById('person-filter-label');
     const itemsEl = document.getElementById('person-results-items');
- 
+
     personView.querySelector('.person-filter-grid').addEventListener('click', e => {
       const card = e.target.closest('[data-person]');
       if (!card) return;
@@ -419,20 +419,20 @@ window.HG = (function () {
       const filtered = person === '__other__'
         ? _filterItems.filter(it => !it.person)
         : _filterItems.filter(it => it.person === person);
- 
+
       labelEl.textContent = person === '__other__' ? 'Other' : person;
       itemsEl.innerHTML   = _renderFilteredItems(filtered);
- 
+
       personView.style.display  = 'none';
       resultsView.style.display = 'block';
     });
- 
+
     backBtn.addEventListener('click', () => {
       personView.style.display  = '';
       resultsView.style.display = 'none';
     });
   }
- 
+
   async function renderMember() {
     _initLightbox();
     const params   = new URLSearchParams(location.search);
@@ -441,7 +441,7 @@ window.HG = (function () {
     const crumbEl  = document.getElementById('crumbMember');
     const descEl   = document.getElementById('memberDesc');
     const gridEl   = document.getElementById('memberGrid');
- 
+
     const member = TEAM.find(m => m.id === memberId);
     if (!member) {
       titleEl.textContent = 'Member not found';
@@ -449,12 +449,12 @@ window.HG = (function () {
       gridEl.innerHTML    = '<p class="empty">No member with that ID.</p>';
       return;
     }
- 
+
     document.title  = `${member.name} — HexaGram`;
     titleEl.textContent = member.name;
     crumbEl.textContent = member.name;
     if (descEl && member.bio) descEl.textContent = member.bio;
- 
+
     try {
       const data = await loadContent();
       const cats = data.categories || [];
@@ -473,6 +473,6 @@ window.HG = (function () {
       gridEl.innerHTML = `<div class="loading">Could not load categories. ${escapeHtml(e.message)}</div>`;
     }
   }
- 
+
   return { renderHome, renderTemplate, renderMember };
 })();
