@@ -9,42 +9,42 @@ window.HG = (function () {
       role: 'Group Leader',
       initial: 'A',
       leader: true,
-      bio: 'Led the team through every phase of the project — from planning empathy interviews to coordinating the final prototype. Kept things moving when consensus was hard to reach, and was the first to try any new tool the team adopted.'
+      bio: 'Led HexaGram from the first survey through to the final prototype, keeping six people moving in the same direction without losing the thread of the research. Coordinated the 6-3-5 ideation sessions, drove the idea-narrowing process, and made the call to build SHIELD as the group\'s working solution. The kind of person who reads the brief twice before anyone else has opened it.'
     },
     {
       name: 'Ayushman',
       id: 'SE24UCSE258',
       role: 'Member',
       initial: 'A',
-      bio: 'Conducted the most interviews in the team and had a particular knack for getting interviewees to open up past their initial, guarded answers. Also took the lead on synthesising raw notes into persona drafts.'
+      bio: 'Conducted user interviews that produced some of the group\'s sharpest insights — particularly around anxiety-driven news consumption and how algorithmic feeds exploit emotional responses. Took those findings into persona and journey map work that grounded the whole project in real behaviour rather than assumptions. Also contributed to the poster and the website that document the full journey.'
     },
     {
       name: 'Aniket',
       id: 'SE24UCSE188',
       role: 'Member',
       initial: 'A',
-      bio: 'Handled most of the structural and diagrammatic work — the RCA, the persona comparison chart, and the journey maps all went through his hands at some point. Good at finding the shape inside a mess of data.'
+      bio: 'Ran interviews that surfaced the trust dynamics at play in peer sharing — how a well-designed post or a family member\'s forward bypasses every instinct to question. Brought that lens into the persona work and kept the root cause analysis honest when the group was tempted to stay at the surface. Contributed across the documentation and presentation stages too.'
     },
     {
       name: 'Monish',
       id: 'SE24UCSE153',
       role: 'Member',
       initial: 'M',
-      bio: 'Took charge of the website build and made sure every artefact the team produced was documented and accessible. Also wrote a significant chunk of the interview transcripts from scratch, listening back through hours of recordings.'
+      bio: 'Ran three interviews, paired with Sushanth to build out the consolidated Persona 1 "The Impulsive Social Sharer" and brought his interview findings into the 6-3-5 ideation round. Had a hand in the early prototyping work that eventually became SHIELD, and helped shape the website structure that ties the project\'s output together.'
     },
     {
       name: 'Sushanth',
       id: 'SE24UCSE168',
       role: 'Member',
       initial: 'S',
-      bio: 'Did the most fieldwork interviews and covered interviewees from the widest range of backgrounds. Was consistently the most willing to push back on the group when a design direction felt off. His instincts on the HMW shortlist were right more often than not.'
+      bio: 'Ran three interviews, generated four individual personas, and contributed to one of the three consolidated chart paper personas alongside Monish. Worked across the full length of the project — from generating the journey maps and root cause analysis through to idea filtering and the browser extension prototype. Maintained the group\'s weekly learning reports throughout, and took responsibility for aggregating all text and images for the team poster. Actively engaged in bettering the group\'s website and implementing the necessary modifications.'
     },
     {
       name: 'Shiven',
       id: 'SE24UCSE187',
       role: 'Member',
       initial: 'S',
-      bio: 'Focused on the ideation and solution phases. Ran the 6-3-5 brainwriting sessions and managed the filtering process that took 1,080 raw ideas down to three viable solution groups. Also built and tested the Chrome extension MVP.'
+      bio: 'Contributed to the research, ideation, and build phases across the project, with a particular hand in the poster and website work that made the group\'s output presentable. Part of the team that took 1080 raw ideas and filtered them down to something actually buildable — and then helped build it.'
     }
   ];
  
