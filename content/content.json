@@ -2,16 +2,18 @@
   "categories": [
     {
       "id": "audio-recordings",
-      "title": "Audio Recordings",
+      "title": "Interviews",
       "icon": "🎙",
-      "summary": "Raw interview audio from our field research sessions.",
-      "description": "Original voice recordings captured during empathy interviews. Each clip is paired with a transcript under the Transcripts section.",
+      "summary": "Field interview recordings from our empathy research sessions.",
+      "description": "Original voice recordings captured during one-on-one empathy interviews conducted across different user segments. Each clip is paired with a written transcript in the Transcripts section.",
       "blocks": [
         {
           "type": "text",
-          "heading": "Overview",
+          "heading": "About These Interviews",
           "paragraphs": [
-            "This archive contains the original audio captured during our user interviews."
+            "We conducted structured empathy interviews with people from varied backgrounds to understand how they encounter and respond to misinformation online. Each conversation was kept conversational and open-ended, allowing interviewees to steer the discussion toward what mattered most to them.",
+            "The recordings here are unedited and unscripted — what you hear is exactly what was said. Some sessions run long because the most interesting observations tended to come up naturally, well past the initial questions. We found that giving people room to talk led to far richer data than sticking to a rigid script.",
+            "Select a person below to listen to their session. Written transcripts of every recording are available in the Transcripts section."
           ]
         },
         {
@@ -19,18 +21,66 @@
           "heading": "Recordings",
           "filterByPerson": true,
           "items": [
-            { "label": "Recording 1 — Shiven",    "src": "assets/audio/interview-shiven.mp4",     "person": "Shiven" },
-            { "label": "Recording 1 — Ayushman",  "src": "assets/audio/interview-ayushman-1.mp4", "person": "Ayushman" },
-            { "label": "Recording 2 — Ayushman",  "src": "assets/audio/interview-ayushman-2.mp4", "person": "Ayushman" },
-            { "label": "Recording 3 — Ayushman",  "src": "assets/audio/interview-ayushman-3.mp4", "person": "Ayushman" },
-            { "label": "Recording 1 — Monish",    "src": "assets/audio/interview-monish-1.mp4",   "person": "Monish" },
-            { "label": "Recording 2 — Monish",    "src": "assets/audio/interview-monish-2.mp4",   "person": "Monish" },
-            { "label": "Recording 3 — Monish",    "src": "assets/audio/interview-monish-3.mp4",   "person": "Monish" },
-            { "label": "Recording 1 — Aniket",    "src": "assets/audio/interview-aniket-1.mp4",   "person": "Aniket" },
-            { "label": "Recording 2 — Aniket",    "src": "assets/audio/interview-aniket-2.mp4",   "person": "Aniket" },
-            { "label": "Recording 1 — Sushanth",  "src": "assets/audio/interview-sushanth-1.wav", "person": "Sushanth" },
-            { "label": "Recording 2 — Sushanth",  "src": "assets/audio/interview-sushanth-2.wav", "person": "Sushanth" },
-            { "label": "Recording 3 — Sushanth",  "src": "assets/audio/interview-sushanth-3.wav", "person": "Sushanth" }
+            {
+              "label": "Recording 1  Shiven",
+              "src": "assets/audio/interview-shiven.mp4",
+              "person": "Shiven"
+            },
+            {
+              "label": "Recording 1  Ayushman",
+              "src": "assets/audio/interview-ayushman-1.mp4",
+              "person": "Ayushman"
+            },
+            {
+              "label": "Recording 2  Ayushman",
+              "src": "assets/audio/interview-ayushman-2.mp4",
+              "person": "Ayushman"
+            },
+            {
+              "label": "Recording 3  Ayushman",
+              "src": "assets/audio/interview-ayushman-3.mp4",
+              "person": "Ayushman"
+            },
+            {
+              "label": "Recording 1  Monish",
+              "src": "assets/audio/interview-monish-1.mp4",
+              "person": "Monish"
+            },
+            {
+              "label": "Recording 2  Monish",
+              "src": "assets/audio/interview-monish-2.mp4",
+              "person": "Monish"
+            },
+            {
+              "label": "Recording 3  Monish",
+              "src": "assets/audio/interview-monish-3.mp4",
+              "person": "Monish"
+            },
+            {
+              "label": "Recording 1  Aniket",
+              "src": "assets/audio/interview-aniket-1.mp4",
+              "person": "Aniket"
+            },
+            {
+              "label": "Recording 2  Aniket",
+              "src": "assets/audio/interview-aniket-2.mp4",
+              "person": "Aniket"
+            },
+            {
+              "label": "Recording 1  Sushanth",
+              "src": "assets/audio/interview-sushanth-1.wav",
+              "person": "Sushanth"
+            },
+            {
+              "label": "Recording 2  Sushanth",
+              "src": "assets/audio/interview-sushanth-2.wav",
+              "person": "Sushanth"
+            },
+            {
+              "label": "Recording 3  Sushanth",
+              "src": "assets/audio/interview-sushanth-3.wav",
+              "person": "Sushanth"
+            }
           ]
         }
       ]
@@ -44,18 +94,32 @@
       "blocks": [
         {
           "type": "text",
-          "heading": "Synthesis approach",
+          "heading": "How We Built These",
           "paragraphs": [
-            "Individual personas were grouped by shared goals, frustrations, and behaviors. Each consolidated persona represents a recurring archetype from our interview data."
+            "Individual personas were first created for each interviewee based on their specific goals, frustrations, tech habits, and media behaviour. Once we had all the raw personas in front of us, patterns started to surface pretty quickly.",
+            "We grouped them by shared motivations and pain points, then collapsed overlapping traits into three consolidated archetypes. Each consolidated persona is a composite drawn from multiple real people, not a fictional invention. The quotes and frustrations attributed to each are pulled directly from interview transcripts.",
+            "The three personas represent meaningfully different relationships with online information: one shares impulsively without verifying, one fact-checks obsessively but gets worn down by it, and one scrolls anxiously without any reliable way to know what to trust. These differences shaped every design decision that followed."
           ]
         },
         {
           "type": "images",
-          "heading": "Consolidated persona boards",
+          "heading": "Consolidated Persona Boards",
           "items": [
-            { "src": "assets/images/consolidated-p1.jpg", "alt": "Consolidated Persona 1", "caption": "Consolidated Persona 01" },
-            { "src": "assets/images/consolidated-p2.jpg", "alt": "Consolidated Persona 2", "caption": "Consolidated Persona 02" },
-            { "src": "assets/images/consolidated-p3.jpg", "alt": "Consolidated Persona 3", "caption": "Consolidated Persona 03" }
+            {
+              "src": "assets/images/consolidated-p1.jpg",
+              "alt": "Consolidated Persona 1",
+              "caption": "Consolidated Persona 01"
+            },
+            {
+              "src": "assets/images/consolidated-p2.jpg",
+              "alt": "Consolidated Persona 2",
+              "caption": "Consolidated Persona 02"
+            },
+            {
+              "src": "assets/images/consolidated-p3.jpg",
+              "alt": "Consolidated Persona 3",
+              "caption": "Consolidated Persona 03"
+            }
           ]
         }
       ]
@@ -68,10 +132,22 @@
       "description": "A chart mapping all personas against shared attributes to identify patterns and differences.",
       "blocks": [
         {
+          "type": "text",
+          "heading": "What This Chart Shows",
+          "paragraphs": [
+            "Once we had all individual personas documented, we needed a way to see them together rather than in isolation. This comparison chart maps every persona across the same set of dimensions: digital literacy, frequency of encountering misinformation, reaction type (share vs verify vs ignore), trust in media, and emotional response to false content.",
+            "The chart made it immediately clear that our interviewees were not a uniform group. The spread across dimensions is wide enough that a single solution targeting one type of user would fail the others. This insight directly influenced our decision to build something passive and ambient rather than something that demands active engagement from the user."
+          ]
+        },
+        {
           "type": "images",
-          "heading": "Comparison chart",
+          "heading": "Comparison Chart",
           "items": [
-            { "src": "assets/images/consolidated-chart.jpg", "alt": "Personas Comparison Chart", "caption": "Personas comparison across key dimensions" }
+            {
+              "src": "assets/images/consolidated-chart.jpg",
+              "alt": "Personas Comparison Chart",
+              "caption": "Personas comparison across key dimensions"
+            }
           ]
         }
       ]
@@ -84,10 +160,23 @@
       "description": "The How Might We question that anchors our project and the reasoning behind its framing.",
       "blocks": [
         {
+          "type": "text",
+          "heading": "Framing the Problem as Opportunity",
+          "paragraphs": [
+            "How Might We questions sit at the hinge between research and ideation. They are specific enough to be actionable but open enough not to pre-suppose a solution. Getting the framing right took us several rounds of iteration.",
+            "Our first attempts were either too broad (\"How might we stop misinformation?\") or too narrow (\"How might we add a warning to fake news?\"). Neither worked. Broad questions generate unfocused ideas. Narrow ones lead you straight to a solution before you have understood the problem.",
+            "The shortlisted questions below represent our best attempts at the right level of specificity. The final HMW we landed on acknowledges the role of algorithmic amplification, keeps the user in the centre, and leaves room for a wide enough set of solutions to be useful in ideation."
+          ]
+        },
+        {
           "type": "images",
           "heading": "Top HMW Questions",
           "items": [
-            { "src": "assets/images/hmw-questions.jpg", "alt": "Top 10 HMW Questions", "caption": "Top 10 HMW questions shortlisted by the team" }
+            {
+              "src": "assets/images/hmw-questions.jpg",
+              "alt": "Top 10 HMW Questions",
+              "caption": "Top 10 HMW questions shortlisted by the team"
+            }
           ]
         }
       ]
@@ -100,12 +189,33 @@
       "description": "A visualization of touchpoints, emotions, and friction points across the user journey.",
       "blocks": [
         {
+          "type": "text",
+          "heading": "Mapping the Experience",
+          "paragraphs": [
+            "We created journey maps for each of our three consolidated personas to trace what actually happens when they encounter potentially misleading content online. The maps cover the full arc: from the initial scroll and first encounter with suspect content, through their internal deliberation, to whatever action they take (share, ignore, verify, feel bad about it).",
+            "What the maps revealed was how much emotional weight each encounter carries. For the Impulsive Sharer, there is almost no friction point at all before sharing. For the Cautious Verifier, the journey is exhausting, requiring multiple tabs, cross-referencing, and still no certainty. For the Anxious Consumer, there is a persistent low-grade dread that never fully resolves.",
+            "These maps grounded our ideation. Any solution we built needed to interrupt the Impulsive Sharer before the share, support the Cautious Verifier without adding to their cognitive load, and give the Anxious Consumer something concrete to hold on to."
+          ]
+        },
+        {
           "type": "images",
-          "heading": "User journey maps",
+          "heading": "User Journey Maps",
           "items": [
-            { "src": "assets/images/journey-map-p1.jpg", "alt": "Journey Map P1", "caption": "P1 — Impulsive Sharer" },
-            { "src": "assets/images/journey-map-p2.jpg", "alt": "Journey Map P2", "caption": "P2 — Cautious Verifier" },
-            { "src": "assets/images/journey-map-p3.jpg", "alt": "Journey Map P3", "caption": "P3 — Anxious Consumer" }
+            {
+              "src": "assets/images/journey-map-p1.jpg",
+              "alt": "Journey Map P1",
+              "caption": "P1  Impulsive Sharer"
+            },
+            {
+              "src": "assets/images/journey-map-p2.jpg",
+              "alt": "Journey Map P2",
+              "caption": "P2  Cautious Verifier"
+            },
+            {
+              "src": "assets/images/journey-map-p3.jpg",
+              "alt": "Journey Map P3",
+              "caption": "P3  Anxious Consumer"
+            }
           ]
         }
       ]
@@ -118,26 +228,99 @@
       "description": "Each persona represents one interviewee's goals, frustrations, and context, before consolidation.",
       "blocks": [
         {
+          "type": "text",
+          "heading": "Raw Personas from Interviews",
+          "paragraphs": [
+            "Before we consolidated, each interview produced its own persona card. These individual personas are grounded entirely in what one specific person told us during their session. No merging, no averaging, no assumptions filled in.",
+            "The value of keeping the individual personas alongside the consolidated ones is traceability. When a design decision later gets challenged, we can always go back and point to a specific person who articulated exactly this need or exactly this frustration. The individual personas are evidence; the consolidated ones are synthesis.",
+            "Select a person below to view the persona cards created from their interviews."
+          ]
+        },
+        {
           "type": "images",
-          "heading": "Individual personas",
+          "heading": "Individual Personas",
           "filterByPerson": true,
           "items": [
-            { "src": "assets/images/persona-shiven-1.jpg",   "alt": "Persona Shiven 1",   "person": "Shiven" },
-            { "src": "assets/images/persona-shiven-2.jpg",   "alt": "Persona Shiven 2",   "person": "Shiven" },
-            { "src": "assets/images/persona-shiven-3.jpg",   "alt": "Persona Shiven 3",   "person": "Shiven" },
-            { "src": "assets/images/persona-ayushman-1.jpg", "alt": "Persona Ayushman 1", "person": "Ayushman" },
-            { "src": "assets/images/persona-ayushman-2.jpg", "alt": "Persona Ayushman 2", "person": "Ayushman" },
-            { "src": "assets/images/persona-ayushman-3.jpg", "alt": "Persona Ayushman 3", "person": "Ayushman" },
-            { "src": "assets/images/persona-monish-1.jpg",   "alt": "Persona Monish 1",   "person": "Monish" },
-            { "src": "assets/images/persona-monish-2.jpg",   "alt": "Persona Monish 2",   "person": "Monish" },
-            { "src": "assets/images/persona-monish-3.jpg",   "alt": "Persona Monish 3",   "person": "Monish" },
-            { "src": "assets/images/persona-aniket-1.jpg",   "alt": "Persona Aniket 1",   "person": "Aniket" },
-            { "src": "assets/images/persona-aniket-2.jpg",   "alt": "Persona Aniket 2",   "person": "Aniket" },
-            { "src": "assets/images/persona-aniket-3.jpg",   "alt": "Persona Aniket 3",   "person": "Aniket" },
-            { "src": "assets/images/persona-sushanth-1.jpg", "alt": "Persona Sushanth 1", "person": "Sushanth" },
-            { "src": "assets/images/persona-sushanth-2.jpg", "alt": "Persona Sushanth 2", "person": "Sushanth" },
-            { "src": "assets/images/persona-sushanth-3.jpg", "alt": "Persona Sushanth 3", "person": "Sushanth" },
-            { "src": "assets/images/persona-sushanth-4.jpg", "alt": "Persona Sushanth 4", "person": "Sushanth" }
+            {
+              "src": "assets/images/persona-shiven-1.jpg",
+              "alt": "Persona Shiven 1",
+              "person": "Shiven"
+            },
+            {
+              "src": "assets/images/persona-shiven-2.jpg",
+              "alt": "Persona Shiven 2",
+              "person": "Shiven"
+            },
+            {
+              "src": "assets/images/persona-shiven-3.jpg",
+              "alt": "Persona Shiven 3",
+              "person": "Shiven"
+            },
+            {
+              "src": "assets/images/persona-ayushman-1.jpg",
+              "alt": "Persona Ayushman 1",
+              "person": "Ayushman"
+            },
+            {
+              "src": "assets/images/persona-ayushman-2.jpg",
+              "alt": "Persona Ayushman 2",
+              "person": "Ayushman"
+            },
+            {
+              "src": "assets/images/persona-ayushman-3.jpg",
+              "alt": "Persona Ayushman 3",
+              "person": "Ayushman"
+            },
+            {
+              "src": "assets/images/persona-monish-1.jpg",
+              "alt": "Persona Monish 1",
+              "person": "Monish"
+            },
+            {
+              "src": "assets/images/persona-monish-2.jpg",
+              "alt": "Persona Monish 2",
+              "person": "Monish"
+            },
+            {
+              "src": "assets/images/persona-monish-3.jpg",
+              "alt": "Persona Monish 3",
+              "person": "Monish"
+            },
+            {
+              "src": "assets/images/persona-aniket-1.jpg",
+              "alt": "Persona Aniket 1",
+              "person": "Aniket"
+            },
+            {
+              "src": "assets/images/persona-aniket-2.jpg",
+              "alt": "Persona Aniket 2",
+              "person": "Aniket"
+            },
+            {
+              "src": "assets/images/persona-aniket-3.jpg",
+              "alt": "Persona Aniket 3",
+              "person": "Aniket"
+            },
+            {
+              "src": "assets/images/persona-sushanth-1.jpg",
+              "alt": "Persona Sushanth 1",
+              "person": "Sushanth"
+            },
+            {
+              "src": "assets/images/persona-sushanth-2.jpg",
+              "alt": "Persona Sushanth 2",
+              "person": "Sushanth"
+            },
+            {
+              "src": "assets/images/persona-sushanth-3.jpg",
+              "alt": "Persona Sushanth 3",
+              "person": "Sushanth"
+            },
+            {
+              "src": "assets/images/persona-sushanth-4.jpg",
+              "alt": "Persona Sushanth 4",
+              "person": "Sushanth"
+            }
           ]
         }
       ]
@@ -150,10 +333,23 @@
       "description": "A structured breakdown of the underlying causes that produce the symptoms our users report.",
       "blocks": [
         {
+          "type": "text",
+          "heading": "Why Root Cause Analysis?",
+          "paragraphs": [
+            "Every frustration and confusion our interviewees described was a symptom. RCA is the process of tracing those symptoms back to their actual origins rather than designing against the surface complaint.",
+            "Our interviewees kept landing on the same visible problem: they were not sure what to believe when scrolling through their feeds. But the causes behind that uncertainty are not a single thing. They include how recommendation algorithms optimise for engagement over accuracy, how platform interfaces de-emphasise source credibility, how social proof (likes, shares) gets conflated with factual reliability, and how the sheer velocity of content makes slowing down to verify feel like an impossible ask.",
+            "The RCA diagram below traces these causes across four layers: individual behaviour, platform design, algorithmic incentives, and information ecosystem dynamics. Understanding all four layers was essential to framing an HMW question that was genuinely solvable rather than just gesturing at a big systemic problem."
+          ]
+        },
+        {
           "type": "images",
-          "heading": "RCA artifacts",
+          "heading": "RCA Diagram",
           "items": [
-            { "src": "assets/images/rca-diagram.jpg", "alt": "Root Cause Analysis Diagram", "caption": "Root Cause Analysis diagram" }
+            {
+              "src": "assets/images/rca-diagram.jpg",
+              "alt": "Root Cause Analysis Diagram",
+              "caption": "Root Cause Analysis diagram"
+            }
           ]
         }
       ]
@@ -166,22 +362,40 @@
       "description": "Raw response counts and visualizations from the survey we ran to validate the HMW question.",
       "blocks": [
         {
+          "type": "text",
+          "heading": "About the Survey",
+          "paragraphs": [
+            "Before committing to a single HMW question, we ran a quick survey to check whether the problem we were framing resonated with a wider group beyond our interviewees. The survey presented multiple candidate HMW questions and asked respondents to rate each one on relevance and urgency.",
+            "The responses confirmed that questions framed around algorithmic amplification and real-time browsing resonated more strongly than questions focused on media literacy education or post-hoc fact-checking. People intuitively felt the problem was happening to them in the moment, not something that better training would solve.",
+            "The spreadsheet below contains the raw response data. The graph summarises the distribution across all HMW candidates."
+          ]
+        },
+        {
           "type": "images",
-          "heading": "Survey results",
+          "heading": "Survey Results Graph",
           "items": [
-            { "src": "assets/images/hmw-graph.jpg", "alt": "HMW Response Graph", "caption": "Distribution of HMW responses" }
+            {
+              "src": "assets/images/hmw-graph.jpg",
+              "alt": "HMW Response Graph",
+              "caption": "Distribution of HMW responses"
+            }
           ]
         },
         {
           "type": "excel",
-          "heading": "Q2 Ideas — All Groups",
+          "heading": "Q2 Ideas: All Groups",
           "src": "assets/files/hmw-responses.xlsx"
         },
         {
           "type": "files",
           "heading": "Download",
           "items": [
-            { "name": "Q2 Ideas Grouped (XLSX)", "kind": "xlsx", "href": "assets/files/hmw-responses.xlsx", "sub": "hmw-responses.xlsx" }
+            {
+              "name": "Q2 Ideas Grouped (XLSX)",
+              "kind": "xlsx",
+              "href": "assets/files/hmw-responses.xlsx",
+              "sub": "hmw-responses.xlsx"
+            }
           ]
         }
       ]
@@ -213,9 +427,9 @@
           "type": "text",
           "heading": "Three Final Solution Groups",
           "paragraphs": [
-            "Group A — Warning Shield: A browser/Chrome extension that detects suspicious or misleading content and overlays warning indicators directly on webpages.",
-            "Group B — Truth Finder: An on-demand fact-checking tool that verifies claims using trusted sources and provides quick debunks.",
-            "Group C — Credibility Coach: A gamified media literacy platform that encourages responsible sharing and teaches users how to identify misinformation."
+            "Group A: Warning Shield — A browser/Chrome extension that detects suspicious or misleading content and overlays warning indicators directly on webpages.",
+            "Group B: Truth Finder — An on-demand fact-checking tool that verifies claims using trusted sources and provides quick debunks.",
+            "Group C: Credibility Coach — A gamified media literacy platform that encourages responsible sharing and teaches users how to identify misinformation."
           ]
         },
         {
@@ -244,13 +458,36 @@
         },
         {
           "type": "text",
+          "heading": "Working Demo",
+          "paragraphs": [
+            "The screenshots below show Shield running live on real websites. In the first, Shield has flagged a passage on NDTV with a warning overlay. In the second, Shield has detected urgency language in Google search results and surfaced the signal inline."
+          ]
+        },
+        {
+          "type": "images",
+          "heading": "Extension in Action",
+          "items": [
+            {
+              "src": "assets/images/demo-shield-ndtv.png",
+              "alt": "Shield flagging content on NDTV",
+              "caption": "Shield flagging a suspicious passage on NDTV"
+            },
+            {
+              "src": "assets/images/demo-shield-google.png",
+              "alt": "Shield detecting urgency in Google results",
+              "caption": "Shield detecting urgency language in Google search results"
+            }
+          ]
+        },
+        {
+          "type": "text",
           "heading": "How to Install",
           "paragraphs": [
             "1. Download the ZIP file using the link below.",
             "2. Extract the ZIP file.",
             "3. Open Google Chrome and go to: chrome://extensions/",
             "4. Enable Developer Mode from the top right corner.",
-            "5. Click the 'Load unpacked' button.",
+            "5. Click the Load unpacked button.",
             "6. Select the extracted extension folder containing the manifest.json file.",
             "The extension will now be installed and ready to use."
           ]
@@ -274,18 +511,57 @@
       "title": "Transcripts",
       "icon": "📝",
       "summary": "Written transcripts of every interview.",
-      "description": "Verbatim transcripts of every recording in the Audio Recordings archive.",
+      "description": "Verbatim transcripts of every recording in the Interviews archive.",
       "blocks": [
         {
+          "type": "text",
+          "heading": "About the Transcripts",
+          "paragraphs": [
+            "Every recording in the Interviews section has a corresponding written transcript here. These were produced by team members listening back through each session — not auto-generated — so they include the pauses, the corrections, the digressions, and the moments where a respondent changed their mind mid-sentence.",
+            "We kept the transcripts verbatim rather than cleaning them up because the texture of how people talk about misinformation turned out to be as informative as what they said. The uncertainty in someone's voice when they try to explain why they shared something, or the frustration in how they describe trying to verify a claim, comes through in the raw transcript in a way that a polished summary would lose.",
+            "Select a person below to download their transcript."
+          ]
+        },
+        {
           "type": "files",
-          "heading": "All transcripts",
+          "heading": "All Transcripts",
           "filterByPerson": true,
           "items": [
-            { "name": "Transcript — Shiven",   "kind": "txt", "href": "assets/files/transcript-shiven.txt",    "sub": "transcript-shiven.txt",    "person": "Shiven" },
-            { "name": "Transcript — Ayushman", "kind": "pdf", "href": "assets/files/transcript-ayushman.pdf",  "sub": "transcript-ayushman.pdf",  "person": "Ayushman" },
-            { "name": "Transcript — Monish",   "kind": "pdf", "href": "assets/files/transcript-monish.pdf",    "sub": "transcript-monish.pdf",    "person": "Monish" },
-            { "name": "Transcript — Aniket",   "kind": "pdf", "href": "assets/files/transcript-aniket.pdf",    "sub": "transcript-aniket.pdf",    "person": "Aniket" },
-            { "name": "Transcript — Sushanth", "kind": "pdf", "href": "assets/files/transcript-sushanth.pdf",  "sub": "transcript-sushanth.pdf",  "person": "Sushanth" }
+            {
+              "name": "Transcript  Shiven",
+              "kind": "txt",
+              "href": "assets/files/transcript-shiven.txt",
+              "sub": "transcript-shiven.txt",
+              "person": "Shiven"
+            },
+            {
+              "name": "Transcript  Ayushman",
+              "kind": "pdf",
+              "href": "assets/files/transcript-ayushman.pdf",
+              "sub": "transcript-ayushman.pdf",
+              "person": "Ayushman"
+            },
+            {
+              "name": "Transcript  Monish",
+              "kind": "pdf",
+              "href": "assets/files/transcript-monish.pdf",
+              "sub": "transcript-monish.pdf",
+              "person": "Monish"
+            },
+            {
+              "name": "Transcript  Aniket",
+              "kind": "pdf",
+              "href": "assets/files/transcript-aniket.pdf",
+              "sub": "transcript-aniket.pdf",
+              "person": "Aniket"
+            },
+            {
+              "name": "Transcript  Sushanth",
+              "kind": "pdf",
+              "href": "assets/files/transcript-sushanth.pdf",
+              "sub": "transcript-sushanth.pdf",
+              "person": "Sushanth"
+            }
           ]
         }
       ]
