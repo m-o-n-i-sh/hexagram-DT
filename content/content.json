@@ -468,12 +468,12 @@
           "heading": "Extension in Action",
           "items": [
             {
-              "src": "assets/images/Demo-shield-ndtv.jpg",
+              "src": "assets/images/Demo-shield-google.jpg",
               "alt": "Shield flagging content on NDTV",
               "caption": "Shield flagging a suspicious passage on NDTV"
             },
             {
-              "src": "assets/images/Demo-shield-google.jpg",
+              "src": "assets/images/Demo-shield-ndtv.jpg",
               "alt": "Shield detecting urgency in Google results",
               "caption": "Shield detecting urgency language in Google search results"
             }
